@@ -50,6 +50,7 @@ if ($sqlSecurity->isIpWhiteListed($ipClient)==0)
 }
 else
 {
+    header('Content-Type: application/json; charset=utf-8');
     echo main();
 }
 

@@ -40,6 +40,7 @@ if ($isInstalled = $sqlInstall->isDbInstalled($_SERVER['DOCUMENT_ROOT']."/config
 }
 else
 {
+    header('Content-Type: application/json; charset=utf-8');
     echo main();
     $sqlInstall->setDbInstalled($_SERVER['DOCUMENT_ROOT']."/config/sqlSetup.txt");
 }
