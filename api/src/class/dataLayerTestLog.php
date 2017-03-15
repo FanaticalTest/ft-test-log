@@ -65,7 +65,7 @@ class dataLayerTestLog extends mySqlLib
         ON `p`.`project_id` = `tl`.`project_id`
         INNER JOIN `customers` AS `c` 
         ON `p`.`customer_id` = `c`.`customer_id`
-         ;";
+        ORDER BY `tl`.`id` DESC;";
         $result = parent::sQuery($sql);
         $jsonEncode = new jsonLib();
         echo $jsonEncode->jsonEncodeSqlResult($result);
