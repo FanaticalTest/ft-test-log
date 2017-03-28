@@ -1,0 +1,25 @@
+# Composition of the containers needed
+
+db:
+  image: mysql:5.7
+  container_name: mysql
+  volumes:
+   - /var/lib/mysql
+  restart: always
+  ports:
+   - 3306:3306
+  environment:
+   MYSQL_ROOT_PASSWORD: fttestlog
+   MYSQL_DATABASE: fttestlog
+   MYSQL_USER: fttestlog
+   MYSQL_PASSWORD: fttestlog
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  container_name: phpmyadmin
+  environment:
+   - PMA_ARBITRARY=1
+  restart: always
+  ports:
+   - 8080:80
+  volumes:
+   - /sessions
