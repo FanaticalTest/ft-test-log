@@ -8,10 +8,14 @@
 Migrating the php service into java micro service.
 
 ## Functional specification
-TBD
+Customer : The customer is defined by an id in string format and a name. The id must be unique.
 
 ## Non-functional specification
 TBD
+
+## Run & Debug
+* Run test `mvn test -DLOG_FOLDER="C:\dev\github\ft-test-log\logfile"`
+* Run your service without building it : `mvn spring-boot:run -DLOG_FOLDER="C:\dev\github\ft-test-log\logfile"`
 
 ## Docker
 ### Start docker
