@@ -20,6 +20,6 @@ phpmyadmin:
    - PMA_ARBITRARY=1
   restart: always
   ports:
-   - 8080:80
+   - 8081:80
   volumes:
    - /sessions
