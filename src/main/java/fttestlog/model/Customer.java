@@ -9,8 +9,8 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "customers", uniqueConstraints={@UniqueConstraint(columnNames={"customer_id"})})
-public class Customer implements Serializable{
+@Table(name = "customers", uniqueConstraints = {@UniqueConstraint(columnNames = {"customer_id"})})
+public class Customer implements Serializable {
 
   @Id
   @GeneratedValue
@@ -23,10 +23,10 @@ public class Customer implements Serializable{
   @Column(name = "name", nullable = false, length = 255)
   private String name;
 
-  public Customer(){}
+  public Customer() {
+  }
 
-  public Customer(String customerId, String name)
-  {
+  public Customer(String customerId, String name) {
     super();
     this.customerId = customerId;
     this.name = name;
@@ -44,7 +44,7 @@ public class Customer implements Serializable{
     return this.customerId;
   }
 
-  public void setCustomerId(String customerId){
+  public void setCustomerId(String customerId) {
     this.customerId = customerId;
   }
 

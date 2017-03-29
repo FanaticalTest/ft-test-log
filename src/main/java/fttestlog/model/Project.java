@@ -71,6 +71,6 @@ public class Project {
 
   @Override
   public String toString() {
-    return getProjectId() + " - "+ getName();
+    return getProjectId() + " - " + getName();
   }
 }
