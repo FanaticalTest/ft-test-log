@@ -2,7 +2,9 @@ package fttestlog;
 
 import fttestlog.lib.Property;
 import fttestlog.model.Customer;
+import fttestlog.model.Project;
 import fttestlog.repository.CustomerRepository;
+import fttestlog.repository.ProjectRepository;
 import fttestlog.storage.StorageProperties;
 import fttestlog.storage.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,9 @@ public class Application implements CommandLineRunner {
   @Autowired
   private CustomerRepository customerRepository;
 
+  @Autowired
+  private ProjectRepository projectRepository;
+
   public static void main(String[] args) {
     SpringApplication.run(Application.class, args);
   }
@@ -42,9 +47,14 @@ public class Application implements CommandLineRunner {
   public void run(String... args) throws Exception {
 
     customerRepository.deleteAll();
+    projectRepository.deleteAll();
+    Customer c = new Customer(FT_CUSTOMER_ID,FT_CUSTOMER_NAME);
+    Project p = new Project("FT1","ft-test-log");
+    p.setCustomer(c);
 
     if (FT_LOAD_TEST_DATA == 1){
-      customerRepository.save(new Customer(FT_CUSTOMER_ID,FT_CUSTOMER_NAME));
+      customerRepository.save(c);
+      projectRepository.save(p);
     }
 
   }

@@ -30,6 +30,8 @@ public class CustomerControllerTest {
   private final String FT_ADMIN_PASSWORD = prop.read("ft_admin_password");
   private final String FT_USER_USERNAME = prop.read("ft_user_username");
   private final String FT_USER_PASSWORD = prop.read("ft_user_password");
+  private final String FT_CUSTOMER_ID = prop.read("ft_customer_id");
+  private final String FT_CUSTOMER_NAME = prop.read("ft_customer_name");
 
   private final String LONG_STRING = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisi dignissim, vehicula arcu nec, congue odio. 131 char.";
   private final String WRONG_PASSWORD = "toto";
@@ -42,7 +44,8 @@ public class CustomerControllerTest {
     logger.info("List customer with admin user");
     this.mockMvc.perform(get("/customer/list").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
         .andDo(print()).andExpect(status().isOk())
-        .andExpect(content().string(containsString("F1")));
+        .andExpect(content().string(containsString(FT_CUSTOMER_ID)))
+        .andExpect(content().string(containsString(FT_CUSTOMER_NAME)));
   }
 
   @Test
@@ -50,7 +53,7 @@ public class CustomerControllerTest {
     logger.info("List customer with user");
     this.mockMvc.perform(get("/customer/list").with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
         .andDo(print()).andExpect(status().isOk())
-        .andExpect(content().string(containsString("F1")));
+        .andExpect(content().string(containsString(FT_CUSTOMER_ID)));
   }
 
   @Test
