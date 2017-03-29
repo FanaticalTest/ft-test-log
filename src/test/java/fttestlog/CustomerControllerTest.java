@@ -35,11 +35,33 @@ public class CustomerControllerTest {
   private MockMvc mockMvc;
 
   @Test
-  public void listCustomer() throws Exception{
-    logger.info("List customer");
+  public void listCustomerWithAdmin() throws Exception{
+    logger.info("List customer with admin user");
     this.mockMvc.perform(get("/customer/list").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
         .andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("F1")));
+  }
+
+  @Test
+  public void listCustomerWithUser() throws Exception{
+    logger.info("List customer with user");
+    this.mockMvc.perform(get("/customer/list").with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
+        .andDo(print()).andExpect(status().isOk())
+        .andExpect(content().string(containsString("F1")));
+  }
+
+  @Test
+  public void listCustomerWrongPassword() throws Exception{
+    logger.info("List customer using user with wrong password");
+    this.mockMvc.perform(get("/customer/list").with(httpBasic(FT_ADMIN_USERNAME,"toto")))
+        .andDo(print()).andExpect(status().isUnauthorized());
+  }
+
+  @Test
+  public void listCustomerWithoutUser() throws Exception{
+    logger.info("List customer without authentication");
+    this.mockMvc.perform(get("/customer/list"))
+        .andDo(print()).andExpect(status().isUnauthorized());
   }
   
 }

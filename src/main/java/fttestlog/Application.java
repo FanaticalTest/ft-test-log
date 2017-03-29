@@ -19,6 +19,7 @@ public class Application implements CommandLineRunner {
   private Property prop = new Property();
   private final String FT_CUSTOMER_ID = prop.read("ft_customer_id");
   private final String FT_CUSTOMER_NAME = prop.read("ft_customer_name");
+  private final int FT_LOAD_TEST_DATA = Integer.parseInt(prop.read("ft_load_test_data"));
 
   @Autowired
   private CustomerRepository customerRepository;
@@ -30,8 +31,10 @@ public class Application implements CommandLineRunner {
   @Bean
   CommandLineRunner init(StorageService storageService) {
     return (args) -> {
-      //storageService.deleteAll();
-      //storageService.init();
+      if (FT_LOAD_TEST_DATA == 0){
+        storageService.deleteAll();
+        storageService.init();
+      }
     };
   }
 
@@ -40,7 +43,9 @@ public class Application implements CommandLineRunner {
 
     customerRepository.deleteAll();
 
-    customerRepository.save(new Customer(FT_CUSTOMER_ID,FT_CUSTOMER_NAME));
+    if (FT_LOAD_TEST_DATA == 1){
+      customerRepository.save(new Customer(FT_CUSTOMER_ID,FT_CUSTOMER_NAME));
+    }
 
   }
 }
