@@ -71,5 +71,38 @@ public class CustomerControllerTest {
         .andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("New Customer")));
   }
+
+  @Test
+  public void addNewCustomerNotAdmin() throws Exception{
+    logger.info("Add new customer not admin");
+    this.mockMvc.perform(get("/customer/add?customer_id=C1&name=New Customer").with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
+        .andDo(print()).andExpect(status().isForbidden());
+  }
+
+  @Test
+  public void addNewCustomerWrongCredential() throws Exception{
+    logger.info("Add new customer wrong credential");
+    this.mockMvc.perform(get("/customer/add?customer_id=C1&name=New Customer").with(httpBasic(FT_ADMIN_USERNAME,"toto")))
+        .andDo(print()).andExpect(status().isUnauthorized());
+  }
+
+  @Test
+  public void addNewCustomerCustomerIdHuge() throws Exception{
+    logger.info("Add new customer using more 20 char for customer_id");
+    String customerId = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisi dignissim, vehicula arcu nec, congue odio. 131 char.";
+    this.mockMvc.perform(get("/customer/add?customer_id="+customerId+"&name=New Customer").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
+        .andDo(print()).andExpect(status().isOk())
+        .andExpect(content().string(containsString("Server error")));
+  }
+
+  @Test
+  public void addNewCustomerCustomerNameHuge() throws Exception{
+    logger.info("Add new customer using more 255 char for customer name");
+    String customerName = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisi dignissim, vehicula arcu nec, congue odio. 131 char.";
+    customerName = customerName + customerName + customerName;
+    this.mockMvc.perform(get("/customer/add?customer_id=C1&name="+customerName).with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
+        .andDo(print()).andExpect(status().isOk())
+        .andExpect(content().string(containsString("Server error")));
+  }
   
 }
