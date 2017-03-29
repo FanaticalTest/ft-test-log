@@ -24,3 +24,4 @@ logfile/
 .idea_modules
 .project
 RUNNING_PID
+log.txt

@@ -79,6 +79,14 @@ public class CustomerControllerTest {
   }
 
   @Test
+  public void addNewCustomerCustomerIdDuplicate() throws Exception{
+    logger.info("Add new customer with Customer_id in duplicate");
+    this.mockMvc.perform(get("/customer/add?customer_id="+FT_CUSTOMER_ID+"&name=New Customer").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
+        .andDo(print()).andExpect(status().isOk())
+        .andExpect(content().string(containsString("Server error")));
+  }
+
+  @Test
   public void addNewCustomerNotAdmin() throws Exception{
     logger.info("Add new customer not admin");
     this.mockMvc.perform(get("/customer/add?customer_id=C1&name=New Customer").with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
