@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import fttestlog.repository.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -23,5 +24,20 @@ public class CustomerController {
   public @ResponseBody Iterable<Customer> listCustomer() {
     logger.info("Request findAll()");
     return customerRepository.findAll();
+  }
+
+  @GetMapping(path="/add")
+  public @ResponseBody String addNewCustomer (@RequestParam String customer_id, @RequestParam String name){
+    try{
+      Customer c = new Customer(customer_id, name);
+      customerRepository.save(c);
+      logger.info("New customer added : {} - {} ", customer_id, name);
+      return "New customer added : " + name;
+    }
+    catch (Exception e)
+    {
+      logger.debug(e.toString());
+      return "Server error";
+    }
   }
 }

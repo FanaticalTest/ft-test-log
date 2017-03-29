@@ -63,5 +63,13 @@ public class CustomerControllerTest {
     this.mockMvc.perform(get("/customer/list"))
         .andDo(print()).andExpect(status().isUnauthorized());
   }
+
+  @Test
+  public void addNewCustomerHappyPath() throws Exception{
+    logger.info("Add new customer happy path");
+    this.mockMvc.perform(get("/customer/add?customer_id=C1&name=New Customer").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
+        .andDo(print()).andExpect(status().isOk())
+        .andExpect(content().string(containsString("New Customer")));
+  }
   
 }
