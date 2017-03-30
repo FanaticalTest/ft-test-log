@@ -1,51 +1,34 @@
 # ft-test-log
 
-## Introduction
-This api allows to ft-test-factory to log using rest api automated test result in a mysql database.
+## Component prerequisite
+* MySql 5.7
+* Java 8.111
+* Spring boot 4.1.3
 
-## Build 
+## Migration to Java
+Migrating the php service into java micro service.
 
-### Build command
-This is a build command when you develop
-```
-sh rebuild.sh
-```
+## Run & Debug
+* Create an environment variable FTTESTLOG_LOG_FOLDER with the path you want to have to log file
+* Run test : `mvn test > log.txt`
+* Run test and bypass env FTTESTLOG_LOG_FOLDER : `mvn test -DFTTESTLOG_LOG_FOLDER="C:\path\logfile" > log.txt`
+* Run your service without building it  : `mvn spring-boot:run`
+* Run your service without building it and bypass env FTTESTLOG_LOG_FOLDER : `mvn spring-boot:run -DFTTESTLOG_LOG_FOLDER="C:\path\logfile"`
 
-If you need to build db and insert test data at the end of the build use the following command. But you need to un comment the line accordingly
-```
-sh rebuild.sh [IPADDRESS-SQL-SERVER]
-```
+## Build
+* Create an environment variable FTTESTLOG_LOG_FOLDER with the path you want to have to log file
+* Build your service : `mvn clean package`
+* Run your service : `java -jar target/ft-test-log-2.0.0.jar`
 
-### Build clean command
-This command will remove all existing images and build 
-```
-sh remove-all-docker.sh
-```
+## Test
+* For test purpose you can set in the `application.properties` the constant `ft_load_test_data = 0` to not load test data.
+* There are 28 automated integration tests implemented.
+* For manual test, there is also a json file for postman available on the root of the project `ft-test-log.postman_collection.json`
 
-In this build we provide for devlopment purpose a docker for phpmyadmin and a mysql db. Do not use them for production deployment.
-
-## Service insertTestLog
-* When it is POST method you need to pass all the paramters and pass the string "NULL" to force the db null. 
-* In GET method you need minimally to pass "projectId" and the db null are automatically handled.
-
-You should use GET first. If you have too large url then you should use POST.
-
-## Security
-* The system is base on ip whilisting. Update the table `ip_white_list` accordingly. Note if the ip `0.0.0.0` is present in that table. It will allow call from anywhere.
-* The db creation is based on a tocken. When the databse is created the ENV VARIABLE `TOCKEN` is update to avoid an accidental db reset. $
-
-## Production deployment
-Before building ensure the ENV parameter are what you need in the /ROOT-PROJECT/api/Dockerfile
-
-The system will not overwrite your db if already exists. There 2 levels of security to ensure it. But if your db is not created you can use the `/ROOT-PROJECT/api/src/setupdb.php`.
-
-First go under /ROOT-PROJECT/api
-```
-docker build -t fanaticaltest/ft-test-log-php .
-```
-
-If you want to tag with a specific version like X.Y.Z
-```
-docker build -t fanaticaltest/ft-test-log-php:X.Y.Z .
-```
-
+## Docker
+### Start docker
+mysql and phpmyadmin are in containers. Building or running the service ensure to have the mysql up and running.
+`sh rebuild.sh`
+### Reset docker
+To reset all docker image run the following command
+`remove-all-docker.sh`
