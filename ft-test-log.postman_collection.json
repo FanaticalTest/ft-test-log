@@ -8,7 +8,8 @@
 		"75f2d367-14ed-bb56-0f6d-acbf8a37a754",
 		"48a24f76-3b98-7899-91b9-2286f55bbed0",
 		"9e448e2e-62f1-2e02-f415-91eff833248f",
-		"f68779ff-1b22-deda-484d-7e2e98d79202"
+		"f68779ff-1b22-deda-484d-7e2e98d79202",
+		"860ada5c-c7d3-1597-abbb-8d561ca6594b"
 	],
 	"folders": [],
 	"timestamp": 1490865331308,
@@ -17,20 +18,13 @@
 	"requests": [
 		{
 			"id": "48a24f76-3b98-7899-91b9-2286f55bbed0",
-			"headers": "",
-			"url": "http://127.0.0.1:8080/project/add?customer_id=2&project_name=Shopping Cart&project_id=S1",
-			"pathVariables": {},
+			"headers": "Authorization: Basic YmlsbDpwYXNzd29yZA==\n",
+			"url": "http://127.0.0.1:8080/project/add?customer_id=2&project_name=Shopping Cart&project_id_name=S1",
 			"preRequestScript": null,
+			"pathVariables": {},
 			"method": "GET",
-			"collectionId": "324c20f2-d028-38d4-993f-dcb7a11c8624",
 			"data": null,
 			"dataMode": "params",
-			"name": "Add project for Toto -> Shopping",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1490865743314,
-			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "basicAuth",
 			"helperAttributes": {
@@ -38,12 +32,17 @@
 				"username": "bill",
 				"password": "password",
 				"saveToRequest": true
-			}
+			},
+			"time": 1490879515268,
+			"name": "Add project for Toto -> Shopping",
+			"description": "",
+			"collectionId": "324c20f2-d028-38d4-993f-dcb7a11c8624",
+			"responses": []
 		},
 		{
 			"id": "75f2d367-14ed-bb56-0f6d-acbf8a37a754",
-			"headers": "",
-			"url": "http://127.0.0.1:8080/customer/add?customer_id=T1&name=Toto",
+			"headers": "Authorization: Basic YmlsbDpwYXNzd29yZA==\n",
+			"url": "http://127.0.0.1:8080/customer/add?id_name=T1&name=Toto",
 			"preRequestScript": null,
 			"pathVariables": {},
 			"method": "GET",
@@ -52,8 +51,31 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1490865623189,
+			"time": 1490878471261,
 			"name": "Add customer Toto",
+			"description": "",
+			"collectionId": "324c20f2-d028-38d4-993f-dcb7a11c8624",
+			"responses": []
+		},
+		{
+			"id": "860ada5c-c7d3-1597-abbb-8d561ca6594b",
+			"headers": "Authorization: Basic YmlsbDpwYXNzd29yZA==\n",
+			"url": "http://127.0.0.1:8080/testLog/findByProjectId?project_id=4",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "basicAuth",
+			"helperAttributes": {
+				"id": "basic",
+				"username": "bill",
+				"password": "password",
+				"saveToRequest": true
+			},
+			"time": 1490881982303,
+			"name": "FindByProjectId TestLog ",
 			"description": "",
 			"collectionId": "324c20f2-d028-38d4-993f-dcb7a11c8624",
 			"responses": []
@@ -85,8 +107,8 @@
 		},
 		{
 			"id": "9e448e2e-62f1-2e02-f415-91eff833248f",
-			"headers": "",
-			"url": "http://127.0.0.1:8080/testLog/log?project_id=2&feature=feature shop&test_suite=test suite shop&scenario_id=123.3&scenario_name=add to cart&screenshot_url=&tags=@tag1 @tag2&test_status=PASSED&test_timeout=20 s&test_windows_size=1200 by 800&test_start_date=2017-03-30 10:00:00&test_end_date=2017-03-30 10:01:00",
+			"headers": "Authorization: Basic YmlsbDpwYXNzd29yZA==\n",
+			"url": "http://127.0.0.1:8080/testLog/log?project_id=4&feature=feature shop&test_suite=test suite shop&scenario_id=123.3&scenario_name=add to cart&screenshot_url=&tags=@tag1 @tag2&test_status=PASSED&test_timeout=20 s&test_windows_size=1200 by 800&test_start_date=2017-03-30 10:00:00&test_end_date=2017-03-30 10:01:00",
 			"preRequestScript": null,
 			"pathVariables": {},
 			"method": "GET",
@@ -100,7 +122,7 @@
 				"password": "password",
 				"saveToRequest": true
 			},
-			"time": 1490865789941,
+			"time": 1490881964871,
 			"name": "Log Test",
 			"description": "",
 			"collectionId": "324c20f2-d028-38d4-993f-dcb7a11c8624",
@@ -110,38 +132,12 @@
 			"id": "e1524542-314b-e754-d43e-04da659f5893",
 			"headers": "",
 			"url": "http://127.0.0.1:8080/customer/list",
-			"pathVariables": {},
 			"preRequestScript": null,
+			"pathVariables": {},
 			"method": "GET",
-			"collectionId": "324c20f2-d028-38d4-993f-dcb7a11c8624",
 			"data": null,
 			"dataMode": "params",
-			"name": "List customer",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1490865487152,
 			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
-		},
-		{
-			"id": "f68779ff-1b22-deda-484d-7e2e98d79202",
-			"headers": "",
-			"url": "http://127.0.0.1:8080/testLog/list",
-			"pathVariables": {},
-			"preRequestScript": null,
-			"method": "GET",
-			"collectionId": "324c20f2-d028-38d4-993f-dcb7a11c8624",
-			"data": null,
-			"dataMode": "params",
-			"name": "List TestLog",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1490865823409,
-			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "basicAuth",
 			"helperAttributes": {
@@ -149,7 +145,35 @@
 				"username": "bill",
 				"password": "password",
 				"saveToRequest": true
-			}
+			},
+			"time": 1490878326465,
+			"name": "List customer",
+			"description": "",
+			"collectionId": "324c20f2-d028-38d4-993f-dcb7a11c8624",
+			"responses": []
+		},
+		{
+			"id": "f68779ff-1b22-deda-484d-7e2e98d79202",
+			"headers": "Authorization: Basic YmlsbDpwYXNzd29yZA==\n",
+			"url": "http://127.0.0.1:8080/testLog/list",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "basicAuth",
+			"helperAttributes": {
+				"id": "basic",
+				"username": "bill",
+				"password": "password",
+				"saveToRequest": true
+			},
+			"time": 1490878462598,
+			"name": "List TestLog",
+			"description": "",
+			"collectionId": "324c20f2-d028-38d4-993f-dcb7a11c8624",
+			"responses": []
 		}
 	]
 }
