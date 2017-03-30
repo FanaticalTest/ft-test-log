@@ -20,7 +20,6 @@ Migrating the php service into java micro service.
 * Build your service : `mvn clean package`
 * Run your service : `java -jar target/ft-test-log-2.0.0.jar`
 
-
 ## Test
 * There are 25 automated integration tests implemented.
 * For manual test, there is also a json file for postman available on the root of the project `ft-test-log.postman_collection.json`
