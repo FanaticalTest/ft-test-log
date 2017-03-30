@@ -2,6 +2,7 @@ package fttestlog.controller;
 
 import fttestlog.model.Customer;
 import fttestlog.model.Project;
+import fttestlog.model.TestLog;
 import fttestlog.repository.ProjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +27,13 @@ public class ProjectController {
   Iterable<Project> listProject() {
     logger.info("Request findAll()");
     return projectRepository.findAll();
+  }
+
+  @GetMapping(path="/findByProjectIdName")
+  public @ResponseBody
+  Iterable<Project> findByProjectIdName(@RequestParam String project_id_name) {
+    logger.info("Request findByProjectIdName()");
+    return projectRepository.findByProjectIdName(project_id_name);
   }
 
   @GetMapping(path="/add")

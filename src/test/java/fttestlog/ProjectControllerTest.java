@@ -102,4 +102,14 @@ public class ProjectControllerTest {
         .andExpect(content().string(containsString("Server error")));
   }
 
+  @Test
+  public void listTestLogByProjectIdName()throws Exception {
+    logger.info("List project by project id name");
+    this.mockMvc.perform(get("/project/findByProjectIdName?project_id_name=FT1").with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
+        .andDo(print()).andExpect(status().isOk())
+        .andExpect(content().string(containsString("FT1")))
+        .andExpect(content().string(containsString("ft-test-log")))
+        .andExpect(content().string(containsString(FT_CUSTOMER_ID)))
+        .andExpect(content().string(containsString(FT_CUSTOMER_NAME)));
+  }
 }
