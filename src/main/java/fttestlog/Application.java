@@ -75,9 +75,16 @@ public class Application implements CommandLineRunner {
     t.setTestSuite("Test Suite name");
     t.setTestStatus("PASSED");
 
+    Project appleProject = new Project("A1", "Apple project");
+    appleProject.setCustomer(c);
+    Project ibmProject = new Project("IBM1", "IBM project");
+    ibmProject.setCustomer(c);
+
     if (FT_LOAD_TEST_DATA == 1){
       customerRepository.save(c);
       projectRepository.save(p);
+      projectRepository.save(appleProject);
+      projectRepository.save(ibmProject);
       testLogRepository.save(t);
     }
 

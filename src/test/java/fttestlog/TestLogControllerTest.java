@@ -195,14 +195,10 @@ public class TestLogControllerTest {
   public void listTestLogByProjectId() throws Exception{
     logger.info("List Test Log by ProjectID");
 
-    this.mockMvc.perform(get("/project/add?customer_id=1&project_name=IBM project&project_id_name=IBM1").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
-        .andDo(print()).andExpect(status().isOk())
-        .andExpect(content().string(containsString("IBM project")));
-
     Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 
     String urlBuild = "/testLog/log?";
-    urlBuild += "project_id=4&";
+    urlBuild += "project_id=3&";
     urlBuild += "feature=feature01&";
     urlBuild += "test_suite=Test Suite IBM&";
     urlBuild += "scenario_id=ScenarioId02&";
@@ -219,12 +215,12 @@ public class TestLogControllerTest {
         .andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("New test log added")));
 
-    this.mockMvc.perform(get("/testLog/findByProjectId?project_id=4").with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
+    this.mockMvc.perform(get("/testLog/findByProjectId?project_id=3").with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
         .andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("Test Suite IBM")));
 
     logger.info("List Test Log by ProjectID anonymously");
-    this.mockMvc.perform(get("/testLog/findByProjectId?project_id=4"))
+    this.mockMvc.perform(get("/testLog/findByProjectId?project_id=3"))
         .andDo(print()).andExpect(status().isUnauthorized());
 
   }
@@ -233,14 +229,10 @@ public class TestLogControllerTest {
   public void listTestLogByProjectIdName() throws Exception{
     logger.info("List Test Log by ProjectID name");
 
-    this.mockMvc.perform(get("/project/add?customer_id=1&project_name=Apple project&project_id_name=A1").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
-        .andDo(print()).andExpect(status().isOk())
-        .andExpect(content().string(containsString("Apple project")));
-
     Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 
     String urlBuild = "/testLog/log?";
-    urlBuild += "project_id=3&";
+    urlBuild += "project_id=2&";
     urlBuild += "feature=feature01&";
     urlBuild += "test_suite=Test Suite Apple&";
     urlBuild += "scenario_id=ScenarioId02&";
