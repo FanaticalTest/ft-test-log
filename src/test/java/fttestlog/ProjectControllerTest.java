@@ -71,7 +71,7 @@ public class ProjectControllerTest {
   @Test
   public void addProjectUsingAdmin()throws Exception{
     logger.info("Add project with admin user");
-    this.mockMvc.perform(get("/project/add?customer_id=1&project_name=Toto Project&project_id=T1").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
+    this.mockMvc.perform(get("/project/add?customer_id=1&project_name=Toto Project&project_id_name=T1").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
         .andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("Toto Project")));
   }
@@ -79,7 +79,7 @@ public class ProjectControllerTest {
   @Test
   public void addProjectUsingUser()throws Exception{
     logger.info("Add project with user");
-    this.mockMvc.perform(get("/project/add?customer_id=1&project_name=Toto Project&project_id=T1").with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
+    this.mockMvc.perform(get("/project/add?customer_id=1&project_name=Toto Project&project_id_name=T1").with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
         .andDo(print()).andExpect(status().isForbidden());
   }
 
@@ -87,7 +87,7 @@ public class ProjectControllerTest {
   public void addProjectWithHugeProjectId()throws Exception{
     logger.info("Add project with huge project_id");
     String projectId = LONG_STRING;
-    this.mockMvc.perform(get("/project/add?customer_id=1&project_name=Toto Project&project_id="+projectId).with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
+    this.mockMvc.perform(get("/project/add?customer_id=1&project_name=Toto Project&project_id_name="+projectId).with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
         .andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("Server error")));
   }
@@ -97,7 +97,7 @@ public class ProjectControllerTest {
     logger.info("Add project with huge project_name");
     String projectName = LONG_STRING;
     projectName = projectName + projectName + projectName;
-    this.mockMvc.perform(get("/project/add?customer_id=1&project_name="+projectName+"&project_id=T2").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
+    this.mockMvc.perform(get("/project/add?customer_id=1&project_name="+projectName+"&project_id_name=T2").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
         .andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("Server error")));
   }

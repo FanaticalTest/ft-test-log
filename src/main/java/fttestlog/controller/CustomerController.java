@@ -27,11 +27,11 @@ public class CustomerController {
   }
 
   @GetMapping(path="/add")
-  public @ResponseBody String addNewCustomer (@RequestParam String customer_id, @RequestParam String name){
+  public @ResponseBody String addNewCustomer (@RequestParam String id_name, @RequestParam String name){
     try{
-      Customer c = new Customer(customer_id, name);
+      Customer c = new Customer(id_name, name);
       customerRepository.save(c);
-      logger.info("New customer added : {} - {} ", customer_id, name);
+      logger.info("New customer added : {} - {} ", id_name, name);
       return "New customer added : " + name;
     }
     catch (Exception e)

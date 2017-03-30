@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "customers", uniqueConstraints = {@UniqueConstraint(columnNames = {"customer_id"})})
+@Table(name = "customers", uniqueConstraints = {@UniqueConstraint(columnNames = {"id_name"})})
 public class Customer implements Serializable {
 
   @Id
@@ -17,8 +17,8 @@ public class Customer implements Serializable {
   @Column(name = "id")
   private long id;
 
-  @Column(name = "customer_id", nullable = false, length = 20)
-  private String customerId;
+  @Column(name = "id_name", nullable = false, length = 20)
+  private String idName;
 
   @Column(name = "name", nullable = false, length = 255)
   private String name;
@@ -26,9 +26,9 @@ public class Customer implements Serializable {
   public Customer() {
   }
 
-  public Customer(String customerId, String name) {
+  public Customer(String idName, String name) {
     super();
-    this.customerId = customerId;
+    this.idName = idName;
     this.name = name;
   }
 
@@ -40,12 +40,12 @@ public class Customer implements Serializable {
     this.id = id;
   }
 
-  public String getCustomerId() {
-    return this.customerId;
+  public String getIdName() {
+    return this.idName;
   }
 
-  public void setCustomerId(String customerId) {
-    this.customerId = customerId;
+  public void setIdName(String idName) {
+    this.idName = idName;
   }
 
   public String getName() {
@@ -58,7 +58,7 @@ public class Customer implements Serializable {
 
   @Override
   public String toString() {
-    return getCustomerId() + " - " + getName();
+    return getIdName() + " - " + getName();
   }
 
 }

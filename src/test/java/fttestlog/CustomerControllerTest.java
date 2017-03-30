@@ -73,15 +73,15 @@ public class CustomerControllerTest {
   @Test
   public void addNewCustomerHappyPath() throws Exception{
     logger.info("Add new customer happy path");
-    this.mockMvc.perform(get("/customer/add?customer_id=C1&name=New Customer").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
+    this.mockMvc.perform(get("/customer/add?id_name=C1&name=New Customer").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
         .andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("New Customer")));
   }
 
   @Test
   public void addNewCustomerCustomerIdDuplicate() throws Exception{
-    logger.info("Add new customer with Customer_id in duplicate");
-    this.mockMvc.perform(get("/customer/add?customer_id="+FT_CUSTOMER_ID+"&name=New Customer").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
+    logger.info("Add new customer with id_name in duplicate");
+    this.mockMvc.perform(get("/customer/add?id_name="+FT_CUSTOMER_ID+"&name=New Customer").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
         .andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("Server error")));
   }
@@ -89,22 +89,22 @@ public class CustomerControllerTest {
   @Test
   public void addNewCustomerNotAdmin() throws Exception{
     logger.info("Add new customer not admin");
-    this.mockMvc.perform(get("/customer/add?customer_id=C1&name=New Customer").with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
+    this.mockMvc.perform(get("/customer/add?id_name=C1&name=New Customer").with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
         .andDo(print()).andExpect(status().isForbidden());
   }
 
   @Test
   public void addNewCustomerWrongCredential() throws Exception{
     logger.info("Add new customer wrong credential");
-    this.mockMvc.perform(get("/customer/add?customer_id=C1&name=New Customer").with(httpBasic(FT_ADMIN_USERNAME,WRONG_PASSWORD)))
+    this.mockMvc.perform(get("/customer/add?id_name=C1&name=New Customer").with(httpBasic(FT_ADMIN_USERNAME,WRONG_PASSWORD)))
         .andDo(print()).andExpect(status().isUnauthorized());
   }
 
   @Test
   public void addNewCustomerCustomerIdHuge() throws Exception{
-    logger.info("Add new customer using more 20 char for customer_id");
+    logger.info("Add new customer using more 20 char for id_name");
     String customerId = LONG_STRING;
-    this.mockMvc.perform(get("/customer/add?customer_id="+customerId+"&name=New Customer").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
+    this.mockMvc.perform(get("/customer/add?id_name="+customerId+"&name=New Customer").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
         .andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("Server error")));
   }
@@ -114,7 +114,7 @@ public class CustomerControllerTest {
     logger.info("Add new customer using more 255 char for customer name");
     String customerName = LONG_STRING;
     customerName = customerName + customerName + customerName;
-    this.mockMvc.perform(get("/customer/add?customer_id=C1&name="+customerName).with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
+    this.mockMvc.perform(get("/customer/add?id_name=C1&name="+customerName).with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
         .andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("Server error")));
   }

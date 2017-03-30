@@ -190,4 +190,80 @@ public class TestLogControllerTest {
         .andDo(print()).andExpect(status().isOk())
         .andExpect(content().string(containsString("Server error")));
   }
+
+  @Test
+  public void listTestLogByProjectId() throws Exception{
+    logger.info("List Test Log by ProjectID");
+
+    this.mockMvc.perform(get("/project/add?customer_id=1&project_name=IBM project&project_id_name=IBM1").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
+        .andDo(print()).andExpect(status().isOk())
+        .andExpect(content().string(containsString("IBM project")));
+
+    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+
+    String urlBuild = "/testLog/log?";
+    urlBuild += "project_id=4&";
+    urlBuild += "feature=feature01&";
+    urlBuild += "test_suite=Test Suite IBM&";
+    urlBuild += "scenario_id=ScenarioId02&";
+    urlBuild += "scenario_name=Scenario name 02&";
+    urlBuild += "tags=tag02, tag03&";
+    urlBuild += "test_status=PASSED&";
+    urlBuild += "test_timeout=20s&";
+    urlBuild += "test_windows_size=1200 by 800&";
+    urlBuild += "screenshot_url=url_screenshot.png&";
+    urlBuild += "test_start_date="+timestamp+"&";
+    urlBuild += "test_end_date="+timestamp;
+
+    this.mockMvc.perform(get(urlBuild).with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
+        .andDo(print()).andExpect(status().isOk())
+        .andExpect(content().string(containsString("New test log added")));
+
+    this.mockMvc.perform(get("/testLog/findByProjectId?project_id=4").with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
+        .andDo(print()).andExpect(status().isOk())
+        .andExpect(content().string(containsString("Test Suite IBM")));
+
+    logger.info("List Test Log by ProjectID anonymously");
+    this.mockMvc.perform(get("/testLog/findByProjectId?project_id=4"))
+        .andDo(print()).andExpect(status().isUnauthorized());
+
+  }
+
+  @Test
+  public void listTestLogByProjectIdName() throws Exception{
+    logger.info("List Test Log by ProjectID name");
+
+    this.mockMvc.perform(get("/project/add?customer_id=1&project_name=Apple project&project_id_name=A1").with(httpBasic(FT_ADMIN_USERNAME,FT_ADMIN_PASSWORD)))
+        .andDo(print()).andExpect(status().isOk())
+        .andExpect(content().string(containsString("Apple project")));
+
+    Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+
+    String urlBuild = "/testLog/log?";
+    urlBuild += "project_id=3&";
+    urlBuild += "feature=feature01&";
+    urlBuild += "test_suite=Test Suite Apple&";
+    urlBuild += "scenario_id=ScenarioId02&";
+    urlBuild += "scenario_name=Scenario name 02&";
+    urlBuild += "tags=tag02, tag03&";
+    urlBuild += "test_status=PASSED&";
+    urlBuild += "test_timeout=20s&";
+    urlBuild += "test_windows_size=1200 by 800&";
+    urlBuild += "screenshot_url=url_screenshot.png&";
+    urlBuild += "test_start_date="+timestamp+"&";
+    urlBuild += "test_end_date="+timestamp;
+
+    this.mockMvc.perform(get(urlBuild).with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
+        .andDo(print()).andExpect(status().isOk())
+        .andExpect(content().string(containsString("New test log added")));
+
+    this.mockMvc.perform(get("/testLog/findByProjectIdName?project_id_name=A1").with(httpBasic(FT_USER_USERNAME,FT_USER_PASSWORD)))
+        .andDo(print()).andExpect(status().isOk())
+        .andExpect(content().string(containsString("Test Suite Apple")));
+
+    logger.info("List Test Log by ProjectID anonymously");
+    this.mockMvc.perform(get("/testLog/findByProjectIdName?project_id_name=A1"))
+        .andDo(print()).andExpect(status().isUnauthorized());
+
+  }
 }

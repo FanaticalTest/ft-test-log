@@ -29,18 +29,18 @@ public class ProjectController {
   }
 
   @GetMapping(path="/add")
-  public @ResponseBody String addNewProject (@RequestParam Long customer_id, @RequestParam String project_name, @RequestParam String project_id){
+  public @ResponseBody String addNewProject (@RequestParam Long customer_id, @RequestParam String project_name, @RequestParam String project_id_name){
     try{
       Customer c = new Customer();
       c.setId(customer_id);
 
       Project p = new Project();
       p.setName(project_name);
-      p.setProjectId(project_id);
+      p.setIdName(project_id_name);
       p.setCustomer(c);
       projectRepository.save(p);
 
-      logger.info("New project added : {} - {} ", project_name, project_id);
+      logger.info("New project added : {} - {} ", project_name, project_id_name);
       return "New project added : " + project_name;
     }
     catch (Exception e)

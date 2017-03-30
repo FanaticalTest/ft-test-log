@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "projects", uniqueConstraints = {@UniqueConstraint(columnNames = {"project_id"})})
+@Table(name = "projects", uniqueConstraints = {@UniqueConstraint(columnNames = {"id_name"})})
 public class Project {
 
   @Id
@@ -21,8 +21,8 @@ public class Project {
   @Column(name = "name", nullable = false, length = 255)
   private String name;
 
-  @Column(name = "project_id", nullable = false, length = 20)
-  private String projectId;
+  @Column(name = "id_name", nullable = false, length = 20)
+  private String idName;
 
   @ManyToOne
   @JoinColumn(name = "customer_id")
@@ -31,10 +31,10 @@ public class Project {
   public Project() {
   }
 
-  public Project(String projectId, String name) {
+  public Project(String idName, String name) {
     super();
     this.name = name;
-    this.projectId = projectId;
+    this.idName = idName;
   }
 
   public long getId() {
@@ -53,12 +53,12 @@ public class Project {
     this.name = name;
   }
 
-  public String getProjectId() {
-    return this.projectId;
+  public String getIdName() {
+    return this.idName;
   }
 
-  public void setProjectId(String projectId) {
-    this.projectId = projectId;
+  public void setIdName(String idName) {
+    this.idName = idName;
   }
 
   public Customer getCustomer() {
@@ -71,6 +71,6 @@ public class Project {
 
   @Override
   public String toString() {
-    return getProjectId() + " - " + getName();
+    return getIdName() + " - " + getName();
   }
 }

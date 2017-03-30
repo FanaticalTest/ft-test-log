@@ -30,8 +30,22 @@ public class TestLogController {
     return testLogRepository.findAll();
   }
 
+  @GetMapping(path="/findByProjectId")
+  public @ResponseBody
+  Iterable<TestLog> findByProjectId(@RequestParam long project_id) {
+    logger.info("Request findByProjectId()");
+    return testLogRepository.findByProjectId(project_id);
+  }
+
+  @GetMapping(path="/findByProjectIdName")
+  public @ResponseBody
+  Iterable<TestLog> findByProjectIdName(@RequestParam String project_id_name) {
+    logger.info("Request findByProjectIdName()");
+    return testLogRepository.findByProjectIdName(project_id_name);
+  }
+
   @GetMapping(path="/log")
-  public @ResponseBody String addNewTestLog (@RequestParam Long project_id, @RequestParam String feature,
+  public @ResponseBody String addNewTestLog (@RequestParam long project_id, @RequestParam String feature,
                                              @RequestParam String test_suite, @RequestParam String scenario_id,
                                              @RequestParam String scenario_name, @RequestParam String screenshot_url,
                                              @RequestParam String tags, @RequestParam String test_status,
