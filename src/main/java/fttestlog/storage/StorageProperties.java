@@ -8,7 +8,7 @@ public class StorageProperties {
   /**
    * Folder location for storing files
    */
-  private String location = "logfile";
+  private String location = System.getenv("FTTESTLOG_LOG_FOLDER");
 
   public String getLocation() {
     return location;

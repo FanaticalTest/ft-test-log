@@ -40,8 +40,8 @@ public class ProjectController {
       p.setCustomer(c);
       projectRepository.save(p);
 
-      logger.info("New customer added : {} - {} ", project_name, project_id);
-      return "New customer added : " + project_name;
+      logger.info("New project added : {} - {} ", project_name, project_id);
+      return "New project added : " + project_name;
     }
     catch (Exception e)
     {
