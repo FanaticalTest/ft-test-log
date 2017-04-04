@@ -10,6 +10,7 @@ Migrating the php service into java micro service.
 
 ## Run & Debug
 * Create an environment variable FTTESTLOG_LOG_FOLDER with the path you want to have to log file
+* Create an environment variable FTTESTLOG_APP_PROPERTIES for the application.properties file
 * Run test : `mvn test > log.txt`
 * Run test and bypass env FTTESTLOG_LOG_FOLDER : `mvn test -DFTTESTLOG_LOG_FOLDER="C:\path\logfile" > log.txt`
 * Run your service without building it  : `mvn spring-boot:run`
@@ -17,6 +18,7 @@ Migrating the php service into java micro service.
 
 ## Build
 * Create an environment variable FTTESTLOG_LOG_FOLDER with the path you want to have to log file
+* Create an environment variable FTTESTLOG_APP_PROPERTIES for the application.properties file
 * Build your service : `mvn clean package`
 * Run your service : `java -jar target/ft-test-log-2.0.0.jar`
 

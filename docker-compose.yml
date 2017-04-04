@@ -9,10 +9,8 @@ db:
   ports:
    - 3306:3306
   environment:
-   MYSQL_ROOT_PASSWORD: fttestlog
-   MYSQL_DATABASE: fttestlog
-   MYSQL_USER: fttestlog
-   MYSQL_PASSWORD: fttestlog
+   MYSQL_ROOT_PASSWORD: ftdevenv
+   MYSQL_DATABASE: ft-test-log
 phpmyadmin:
   image: phpmyadmin/phpmyadmin
   container_name: phpmyadmin

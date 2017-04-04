@@ -15,7 +15,7 @@ public class Property {
 
     try {
 
-      input = new FileInputStream("src/main/resources/application.properties");
+      input = new FileInputStream(System.getenv("FTTESTLOG_APP_PROPERTIES"));
 
       // load a properties file
       prop.load(input);
