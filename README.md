@@ -8,6 +8,9 @@
 ## Migration to Java
 Migrating the php service into java micro service.
 
+## Hosts
+Ensure to have `http://docker.sak` set to your external IP not localhost.
+
 ## Run & Debug
 * Create an environment variable FTTESTLOG_LOG_FOLDER with the path you want to have to log file
 * Create an environment variable FTTESTLOG_APP_PROPERTIES for the application.properties file
@@ -34,3 +37,6 @@ mysql and phpmyadmin are in containers. Building or running the service ensure t
 ### Reset docker
 To reset all docker image run the following command
 `remove-all-docker.sh`
+
+## Log
+To see the log `http://docker.sak:8080/admin/log/`
