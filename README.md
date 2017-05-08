@@ -23,7 +23,7 @@ Ensure to have `http://docker.sak` set to your external IP not localhost.
 * Create an environment variable FTTESTLOG_LOG_FOLDER with the path you want to have to log file
 * Create an environment variable FTTESTLOG_APP_PROPERTIES for the application.properties file
 * Build your service : `mvn clean package`
-* Run your service : `java -jar target/ft-test-log-2.0.0.jar`
+* Run your service : `java -jar target/ft-test-log-2.0.1.jar`
 
 ## Test
 * For test purpose you can set in the `application.properties` the constant `ft_load_test_data = 0` to not load test data.
