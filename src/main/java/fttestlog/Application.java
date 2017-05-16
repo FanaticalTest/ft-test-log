@@ -42,7 +42,7 @@ public class Application implements CommandLineRunner {
   @Bean
   CommandLineRunner init(StorageService storageService) {
     return (args) -> {
-      if (FT_LOAD_TEST_DATA == 0){
+      if (FT_LOAD_TEST_DATA == 1){
         storageService.deleteAll();
         storageService.init();
       }
@@ -54,9 +54,11 @@ public class Application implements CommandLineRunner {
 
     Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 
-    customerRepository.deleteAll();
-    projectRepository.deleteAll();
-    testLogRepository.deleteAll();
+    if (FT_LOAD_TEST_DATA == 1){
+      customerRepository.deleteAll();
+      projectRepository.deleteAll();
+      testLogRepository.deleteAll();
+    }
 
     Customer c = new Customer(FT_CUSTOMER_ID,FT_CUSTOMER_NAME);
     Project p = new Project("FT1","ft-test-log");
