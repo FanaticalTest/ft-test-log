@@ -1,0 +1,1344 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.fanaticaltest.testlog:ft-test-log:jar:2.0.2
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-test:jar -> duplicate declaration of version (?) @ line 56, column 17
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-thymeleaf:jar -> duplicate declaration of version (?) @ line 67, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building ft-test-log 2.0.2
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ ft-test-log ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ ft-test-log ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ ft-test-log ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/samy/Documents/fanaticaltest/ft-test-log/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ ft-test-log ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.18.1:test (default-test) @ ft-test-log ---
+[INFO] Surefire report directory: /Users/samy/Documents/fanaticaltest/ft-test-log/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+16:26:29,493 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+16:26:29,493 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+16:26:29,493 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/Users/samy/Documents/fanaticaltest/ft-test-log/target/classes/logback.xml]
+16:26:29,548 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+16:26:29,554 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+16:26:29,560 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+16:26:29,608 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - This appender no longer admits a layout as a sub-component, set an encoder instead.
+16:26:29,608 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.
+16:26:29,608 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details
+16:26:29,609 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+16:26:29,613 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [FILE-AUDIT]
+16:26:29,625 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@2068434592 - No compression will be used
+16:26:29,626 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@2068434592 - Will use the pattern /Users/samy/Documents/fanaticaltest/ft-test-log/logs//debug.%d{yyyy-MM-dd}.%i.log for the active file
+16:26:29,629 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@887af79 - The date pattern is 'yyyy-MM-dd' from file name pattern '/Users/samy/Documents/fanaticaltest/ft-test-log/logs//debug.%d{yyyy-MM-dd}.%i.log'.
+16:26:29,629 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@887af79 - Roll-over at midnight.
+16:26:29,632 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@887af79 - Setting initial period to Thu Oct 19 16:19:48 CEST 2017
+16:26:29,632 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@887af79 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+16:26:29,632 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@887af79 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+16:26:29,636 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-AUDIT] - Active log file name: /Users/samy/Documents/fanaticaltest/ft-test-log/logs//debug.log
+16:26:29,636 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE-AUDIT] - File property is set to [/Users/samy/Documents/fanaticaltest/ft-test-log/logs//debug.log]
+16:26:29,637 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+16:26:29,637 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [FILE-AUDIT] to Logger[ROOT]
+16:26:29,638 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]
+16:26:29,638 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+16:26:29,638 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@7fac631b - Registering current configuration as safe fallback point
+
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [fttestlog.CustomerControllerTest], using SpringBootContextLoader
+2017-10-19 16:26:29 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [fttestlog.CustomerControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-10-19 16:26:29 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [fttestlog.CustomerControllerTest]: CustomerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration fttestlog.Application for test class fttestlog.CustomerControllerTest
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener]
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@f5ac9e4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@123ef382, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@dbf57b3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@384ad17b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@61862a7f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@441772e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7334aada, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1d9b7cce, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4d9e68d0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@42e99e4a, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@14dd9eb7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@52e6fdee, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6c80d78a]
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [fttestlog.ProjectControllerTest], using SpringBootContextLoader
+2017-10-19 16:26:29 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [fttestlog.ProjectControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-10-19 16:26:29 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [fttestlog.ProjectControllerTest]: ProjectControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration fttestlog.Application for test class fttestlog.ProjectControllerTest
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener]
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@747ddf94, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@35e2d654, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1bd4fdd, org.springframework.test.context.support.DirtiesContextTestExecutionListener@55183b20, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4f83df68, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6cf0e0ba, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7d8995e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@130d63be, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@42a48628, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@293a5bf6, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@6aeb35e6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1283bb96, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@74f0ea28]
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [fttestlog.TestLogControllerTest], using SpringBootContextLoader
+2017-10-19 16:26:29 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [fttestlog.TestLogControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-10-19 16:26:29 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [fttestlog.TestLogControllerTest]: TestLogControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration fttestlog.Application for test class fttestlog.TestLogControllerTest
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener]
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1165b38, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4c12331b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7586beff, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3b69e7d1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@815b41f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5542c4ed, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1573f9fc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6150c3ec, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@44c03695, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7e6f74c, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@dd05255, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6a78afa0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2f4948e4]
+Running fttestlog.CustomerControllerTest
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [fttestlog.CustomerControllerTest], using SpringBootContextLoader
+2017-10-19 16:26:29 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [fttestlog.CustomerControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-10-19 16:26:29 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [fttestlog.CustomerControllerTest]: CustomerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration fttestlog.Application for test class fttestlog.CustomerControllerTest
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener]
+2017-10-19 16:26:29 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3c3d9b6b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@79d8407f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5fbe4146, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1e66f1f5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4e50c791, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7530ad9c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@58a9760d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@71e9ddb4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@394df057, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4961f6af, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@5aebe890, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@65d09a04, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@33c911a1]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.2.RELEASE)
+
+2017-10-19 16:26:30 [main] INFO  fttestlog.CustomerControllerTest - Starting CustomerControllerTest on samys-Mac-mini.local with PID 1742 (started by samy in /Users/samy/Documents/fanaticaltest/ft-test-log)
+2017-10-19 16:26:30 [main] INFO  fttestlog.CustomerControllerTest - No active profile set, falling back to default profiles: default
+2017-10-19 16:26:30 [main] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@23941fb4: startup date [Thu Oct 19 16:26:30 CEST 2017]; root of context hierarchy
+2017-10-19 16:26:30 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.4.Final
+2017-10-19 16:26:31 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$55d5900a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-10-19 16:26:33 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-10-19 16:26:33 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-10-19 16:26:33 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.12.Final}
+2017-10-19 16:26:33 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2017-10-19 16:26:33 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2017-10-19 16:26:33 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-10-19 16:26:33 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-10-19 16:26:33 [main] INFO  o.h.tool.hbm2ddl.SchemaExport - HHH000227: Running hbm2ddl schema export
+2017-10-19 16:26:34 [main] INFO  o.h.tool.hbm2ddl.SchemaExport - HHH000230: Schema export complete
+2017-10-19 16:26:34 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-10-19 16:26:34 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2017-10-19 16:26:34 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2017-10-19 16:26:34 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a425cf5, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ebfb045, org.springframework.security.web.header.HeaderWriterFilter@6c5ae8fd, org.springframework.security.web.authentication.logout.LogoutFilter@606b53a3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1b94c789, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77c692b4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4bbc21bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17d76ebb, org.springframework.security.web.session.SessionManagementFilter@608b35fa, org.springframework.security.web.access.ExceptionTranslationFilter@491893f8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a833595]
+2017-10-19 16:26:35 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-10-19 16:26:35 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/customer/list],methods=[GET]}" onto public java.lang.Iterable<fttestlog.model.Customer> fttestlog.controller.CustomerController.listCustomer()
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/customer/add],methods=[GET]}" onto public java.lang.String fttestlog.controller.CustomerController.addNewCustomer(java.lang.String,java.lang.String)
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/log/],methods=[GET]}" onto public java.lang.String fttestlog.controller.LogController.listLogs(org.springframework.ui.Model) throws java.io.IOException
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/log/files/{filename:.+}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<org.springframework.core.io.Resource> fttestlog.controller.LogController.serveFile(java.lang.String)
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/admin/log/delete],methods=[GET]}" onto public java.lang.String fttestlog.controller.LogController.deleteFiles(org.springframework.web.servlet.mvc.support.RedirectAttributes)
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/project/list],methods=[GET]}" onto public java.lang.Iterable<fttestlog.model.Project> fttestlog.controller.ProjectController.listProject()
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/project/findByProjectIdName],methods=[GET]}" onto public java.lang.Iterable<fttestlog.model.Project> fttestlog.controller.ProjectController.findByProjectIdName(java.lang.String)
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/project/add],methods=[GET]}" onto public java.lang.String fttestlog.controller.ProjectController.addNewProject(java.lang.Long,java.lang.String,java.lang.String)
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/testLog/findByProjectIdName],methods=[GET]}" onto public java.lang.Iterable<fttestlog.model.TestLog> fttestlog.controller.TestLogController.findByProjectIdName(java.lang.String)
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/testLog/list],methods=[GET]}" onto public java.lang.Iterable<fttestlog.model.TestLog> fttestlog.controller.TestLogController.listTestLog()
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/testLog/findByProjectId],methods=[GET]}" onto public java.lang.Iterable<fttestlog.model.TestLog> fttestlog.controller.TestLogController.findByProjectId(long)
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/testLog/log],methods=[GET]}" onto public java.lang.String fttestlog.controller.TestLogController.addNewTestLog(long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.sql.Timestamp,java.sql.Timestamp)
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-10-19 16:26:35 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@23941fb4: startup date [Thu Oct 19 16:26:30 CEST 2017]; root of context hierarchy
+2017-10-19 16:26:35 [main] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 592 ms
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Started CustomerControllerTest in 6.109 seconds (JVM running for 6.913)
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List customer with user
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - Request findAll()
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customer/list
+       Parameters = {}
+          Headers = {Authorization=[Basic dG9tOnBhc3N3b3Jk]}
+
+Handler:
+             Type = fttestlog.controller.CustomerController
+           Method = public java.lang.Iterable<fttestlog.model.Customer> fttestlog.controller.CustomerController.listCustomer()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":1,"idName":"F1","name":"FanaticalTest"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List customer with admin user
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - Request findAll()
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customer/list
+       Parameters = {}
+          Headers = {Authorization=[Basic YmlsbDpwYXNzd29yZA==]}
+
+Handler:
+             Type = fttestlog.controller.CustomerController
+           Method = public java.lang.Iterable<fttestlog.model.Customer> fttestlog.controller.CustomerController.listCustomer()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":1,"idName":"F1","name":"FanaticalTest"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add new customer wrong credential
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customer/add
+       Parameters = {id_name=[C1], name=[New Customer]}
+          Headers = {Authorization=[Basic YmlsbDp0b3Rv]}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = null
+          Headers = {WWW-Authenticate=[Basic realm=MY_TEST_REALM], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = null
+             Body = HTTP Status 401 : Bad credentials
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add new customer happy path
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - New customer added : C1 - New Customer 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customer/add
+       Parameters = {id_name=[C1], name=[New Customer]}
+          Headers = {Authorization=[Basic YmlsbDpwYXNzd29yZA==]}
+
+Handler:
+             Type = fttestlog.controller.CustomerController
+           Method = public java.lang.String fttestlog.controller.CustomerController.addNewCustomer(java.lang.String,java.lang.String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[33], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = text/plain;charset=UTF-8
+             Body = New customer added : New Customer
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List customer without authentication
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customer/list
+       Parameters = {}
+          Headers = {}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = null
+          Headers = {WWW-Authenticate=[Basic realm=MY_TEST_REALM], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = null
+             Body = HTTP Status 401 : Full authentication is required to access this resource
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add new customer using more 255 char for customer name
+2017-10-19 16:26:36 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1406, SQLState: 22001
+2017-10-19 16:26:36 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Data truncation: Data too long for column 'name' at row 1
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customer/add
+       Parameters = {id_name=[C1], name=[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisi dignissim, vehicula arcu nec, congue odio. 131 char.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisi dignissim, vehicula arcu nec, congue odio. 131 char.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisi dignissim, vehicula arcu nec, congue odio. 131 char.]}
+          Headers = {Authorization=[Basic YmlsbDpwYXNzd29yZA==]}
+
+Handler:
+             Type = fttestlog.controller.CustomerController
+           Method = public java.lang.String fttestlog.controller.CustomerController.addNewCustomer(java.lang.String,java.lang.String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[12], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = text/plain;charset=UTF-8
+             Body = Server error
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add new customer with id_name in duplicate
+2017-10-19 16:26:36 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+2017-10-19 16:26:36 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry 'F1' for key 'UKpef14fhdabyl2e6mq145q82qv'
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customer/add
+       Parameters = {id_name=[F1], name=[New Customer]}
+          Headers = {Authorization=[Basic YmlsbDpwYXNzd29yZA==]}
+
+Handler:
+             Type = fttestlog.controller.CustomerController
+           Method = public java.lang.String fttestlog.controller.CustomerController.addNewCustomer(java.lang.String,java.lang.String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[12], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = text/plain;charset=UTF-8
+             Body = Server error
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List customer using user with wrong password
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customer/list
+       Parameters = {}
+          Headers = {Authorization=[Basic YmlsbDp0b3Rv]}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = null
+          Headers = {WWW-Authenticate=[Basic realm=MY_TEST_REALM], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = null
+             Body = HTTP Status 401 : Bad credentials
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add new customer not admin
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customer/add
+       Parameters = {id_name=[C1], name=[New Customer]}
+          Headers = {Authorization=[Basic dG9tOnBhc3N3b3Jk]}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 403
+    Error message = Access is denied
+          Headers = {X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add new customer using more 20 char for id_name
+2017-10-19 16:26:36 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1406, SQLState: 22001
+2017-10-19 16:26:36 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Data truncation: Data too long for column 'id_name' at row 1
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /customer/add
+       Parameters = {id_name=[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisi dignissim, vehicula arcu nec, congue odio. 131 char.], name=[New Customer]}
+          Headers = {Authorization=[Basic YmlsbDpwYXNzd29yZA==]}
+
+Handler:
+             Type = fttestlog.controller.CustomerController
+           Method = public java.lang.String fttestlog.controller.CustomerController.addNewCustomer(java.lang.String,java.lang.String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[12], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = text/plain;charset=UTF-8
+             Body = Server error
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.469 sec - in fttestlog.CustomerControllerTest
+Running fttestlog.ProjectControllerTest
+2017-10-19 16:26:36 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [fttestlog.ProjectControllerTest], using SpringBootContextLoader
+2017-10-19 16:26:36 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [fttestlog.ProjectControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-10-19 16:26:36 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [fttestlog.ProjectControllerTest]: ProjectControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-10-19 16:26:36 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration fttestlog.Application for test class fttestlog.ProjectControllerTest
+2017-10-19 16:26:36 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener]
+2017-10-19 16:26:36 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@57b3d869, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@51f4439e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@291cbe70, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6be422da, org.springframework.test.context.transaction.TransactionalTestExecutionListener@225ddf5f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@51468039, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1d654b5f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@575d48db, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b36d248, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7e94de5f, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@499c4d61, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@74badf19, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@59b3f754]
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List project with wrong credential
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /project/list
+       Parameters = {}
+          Headers = {Authorization=[Basic dG9tOnRvdG8=]}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = null
+          Headers = {WWW-Authenticate=[Basic realm=MY_TEST_REALM], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = null
+             Body = HTTP Status 401 : Bad credentials
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List project with user
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - Request findAll()
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /project/list
+       Parameters = {}
+          Headers = {Authorization=[Basic dG9tOnBhc3N3b3Jk]}
+
+Handler:
+             Type = fttestlog.controller.ProjectController
+           Method = public java.lang.Iterable<fttestlog.model.Project> fttestlog.controller.ProjectController.listProject()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":1,"name":"ft-test-log","idName":"FT1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}},{"id":2,"name":"Apple project","idName":"A1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}},{"id":3,"name":"IBM project","idName":"IBM1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add project with huge project_name
+2017-10-19 16:26:36 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1406, SQLState: 22001
+2017-10-19 16:26:36 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Data truncation: Data too long for column 'name' at row 1
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /project/add
+       Parameters = {customer_id=[1], project_name=[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisi dignissim, vehicula arcu nec, congue odio. 131 char.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisi dignissim, vehicula arcu nec, congue odio. 131 char.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisi dignissim, vehicula arcu nec, congue odio. 131 char.], project_id_name=[T2]}
+          Headers = {Authorization=[Basic YmlsbDpwYXNzd29yZA==]}
+
+Handler:
+             Type = fttestlog.controller.ProjectController
+           Method = public java.lang.String fttestlog.controller.ProjectController.addNewProject(java.lang.Long,java.lang.String,java.lang.String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[12], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = text/plain;charset=UTF-8
+             Body = Server error
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add project with huge project_id
+2017-10-19 16:26:36 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1406, SQLState: 22001
+2017-10-19 16:26:36 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Data truncation: Data too long for column 'id_name' at row 1
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /project/add
+       Parameters = {customer_id=[1], project_name=[Toto Project], project_id_name=[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisi dignissim, vehicula arcu nec, congue odio. 131 char.]}
+          Headers = {Authorization=[Basic YmlsbDpwYXNzd29yZA==]}
+
+Handler:
+             Type = fttestlog.controller.ProjectController
+           Method = public java.lang.String fttestlog.controller.ProjectController.addNewProject(java.lang.Long,java.lang.String,java.lang.String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[12], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = text/plain;charset=UTF-8
+             Body = Server error
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List project by project id name
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - Request findByProjectIdName()
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /project/findByProjectIdName
+       Parameters = {project_id_name=[FT1]}
+          Headers = {Authorization=[Basic dG9tOnBhc3N3b3Jk]}
+
+Handler:
+             Type = fttestlog.controller.ProjectController
+           Method = public java.lang.Iterable<fttestlog.model.Project> fttestlog.controller.ProjectController.findByProjectIdName(java.lang.String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":1,"name":"ft-test-log","idName":"FT1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add project with user
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /project/add
+       Parameters = {customer_id=[1], project_name=[Toto Project], project_id_name=[T1]}
+          Headers = {Authorization=[Basic dG9tOnBhc3N3b3Jk]}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 403
+    Error message = Access is denied
+          Headers = {X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List project with admin user
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - Request findAll()
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /project/list
+       Parameters = {}
+          Headers = {Authorization=[Basic YmlsbDpwYXNzd29yZA==]}
+
+Handler:
+             Type = fttestlog.controller.ProjectController
+           Method = public java.lang.Iterable<fttestlog.model.Project> fttestlog.controller.ProjectController.listProject()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":1,"name":"ft-test-log","idName":"FT1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}},{"id":2,"name":"Apple project","idName":"A1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}},{"id":3,"name":"IBM project","idName":"IBM1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add project with admin user
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - New project added : Toto Project - T1 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /project/add
+       Parameters = {customer_id=[1], project_name=[Toto Project], project_id_name=[T1]}
+          Headers = {Authorization=[Basic YmlsbDpwYXNzd29yZA==]}
+
+Handler:
+             Type = fttestlog.controller.ProjectController
+           Method = public java.lang.String fttestlog.controller.ProjectController.addNewProject(java.lang.Long,java.lang.String,java.lang.String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[32], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = text/plain;charset=UTF-8
+             Body = New project added : Toto Project
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.147 sec - in fttestlog.ProjectControllerTest
+Running fttestlog.TestLogControllerTest
+2017-10-19 16:26:36 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [fttestlog.TestLogControllerTest], using SpringBootContextLoader
+2017-10-19 16:26:36 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [fttestlog.TestLogControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-10-19 16:26:36 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [fttestlog.TestLogControllerTest]: TestLogControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2017-10-19 16:26:36 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration fttestlog.Application for test class fttestlog.TestLogControllerTest
+2017-10-19 16:26:36 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener]
+2017-10-19 16:26:36 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1b3bb287, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7ec5aad, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@625f5712, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5e62ca19, org.springframework.test.context.transaction.TransactionalTestExecutionListener@188bf4d8, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7dd7ec56, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6528d339, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2dd2ff87, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6a38e3d1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@28cf179c, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@bdda8a7, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3149409c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1c421b0f]
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add test Log as admin
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - New test log added : 2017-10-19 16:26:36.592 - 1 - feature01 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /testLog/log
+       Parameters = {project_id=[1], feature=[feature01], test_suite=[Test Suite 01], scenario_id=[ScenarioId01], scenario_name=[Scenario name 01], tags=[tag02, tag03], test_status=[FAILED], test_timeout=[20s], test_windows_size=[1200 by 800], screenshot_url=[url_screenshot.png], test_start_date=[2017-10-19 16:26:36.592], test_end_date=[2017-10-19 16:26:36.592]}
+          Headers = {Authorization=[Basic YmlsbDpwYXNzd29yZA==]}
+
+Handler:
+             Type = fttestlog.controller.TestLogController
+           Method = public java.lang.String fttestlog.controller.TestLogController.addNewTestLog(long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.sql.Timestamp,java.sql.Timestamp)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[44], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = text/plain;charset=UTF-8
+             Body = New test log added : 2017-10-19 16:26:36.592
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List Test Log with user
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - Request findAll()
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /testLog/list
+       Parameters = {}
+          Headers = {Authorization=[Basic dG9tOnBhc3N3b3Jk]}
+
+Handler:
+             Type = fttestlog.controller.TestLogController
+           Method = public java.lang.Iterable<fttestlog.model.TestLog> fttestlog.controller.TestLogController.listTestLog()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":1,"project":{"id":1,"name":"ft-test-log","idName":"FT1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}},"feature":"Feature01","testSuite":"Test Suite name","scenarioId":"ScenarioId01","scenarioName":"Scenario Name 01","screenshotUrl":"url_screenshot.png","tags":"tag01, tag02","testStartDate":1508423196000,"testEndDate":1508423196000,"testStatus":"PASSED","testTimeout":"20s","testWindowsSize":"1200 by 800"},{"id":2,"project":{"id":1,"name":"ft-test-log","idName":"FT1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}},"feature":"feature01","testSuite":"Test Suite 01","scenarioId":"ScenarioId01","scenarioName":"Scenario name 01","screenshotUrl":"url_screenshot.png","tags":"tag02, tag03","testStartDate":1508423197000,"testEndDate":1508423197000,"testStatus":"FAILED","testTimeout":"20s","testWindowsSize":"1200 by 800"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List Test Log by ProjectID name
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - New test log added : 2017-10-19 16:26:36.634 - 2 - feature01 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /testLog/log
+       Parameters = {project_id=[2], feature=[feature01], test_suite=[Test Suite Apple], scenario_id=[ScenarioId02], scenario_name=[Scenario name 02], tags=[tag02, tag03], test_status=[PASSED], test_timeout=[20s], test_windows_size=[1200 by 800], screenshot_url=[url_screenshot.png], test_start_date=[2017-10-19 16:26:36.634], test_end_date=[2017-10-19 16:26:36.634]}
+          Headers = {Authorization=[Basic dG9tOnBhc3N3b3Jk]}
+
+Handler:
+             Type = fttestlog.controller.TestLogController
+           Method = public java.lang.String fttestlog.controller.TestLogController.addNewTestLog(long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.sql.Timestamp,java.sql.Timestamp)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[44], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = text/plain;charset=UTF-8
+             Body = New test log added : 2017-10-19 16:26:36.634
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - Request findByProjectIdName()
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /testLog/findByProjectIdName
+       Parameters = {project_id_name=[A1]}
+          Headers = {Authorization=[Basic dG9tOnBhc3N3b3Jk]}
+
+Handler:
+             Type = fttestlog.controller.TestLogController
+           Method = public java.lang.Iterable<fttestlog.model.TestLog> fttestlog.controller.TestLogController.findByProjectIdName(java.lang.String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":3,"project":{"id":2,"name":"Apple project","idName":"A1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}},"feature":"feature01","testSuite":"Test Suite Apple","scenarioId":"ScenarioId02","scenarioName":"Scenario name 02","screenshotUrl":"url_screenshot.png","tags":"tag02, tag03","testStartDate":1508423197000,"testEndDate":1508423197000,"testStatus":"PASSED","testTimeout":"20s","testWindowsSize":"1200 by 800"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List Test Log by ProjectID anonymously
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /testLog/findByProjectIdName
+       Parameters = {project_id_name=[A1]}
+          Headers = {}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = null
+          Headers = {WWW-Authenticate=[Basic realm=MY_TEST_REALM], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = null
+             Body = HTTP Status 401 : Full authentication is required to access this resource
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add test Log with wrong credential
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /testLog/log
+       Parameters = {project_id=[1], feature=[feature01], test_suite=[Test Suite 01], scenario_id=[ScenarioId02], scenario_name=[Scenario name 02], tags=[tag02, tag03], test_status=[PASSED], test_timeout=[20s], test_windows_size=[1200 by 800], screenshot_url=[url_screenshot.png], test_start_date=[2017-10-19 16:26:36.662], test_end_date=[2017-10-19 16:26:36.662]}
+          Headers = {Authorization=[Basic dG9tOnRvdG8=]}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = null
+          Headers = {WWW-Authenticate=[Basic realm=MY_TEST_REALM], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = null
+             Body = HTTP Status 401 : Bad credentials
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add test Log with huge data
+2017-10-19 16:26:36 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1406, SQLState: 22001
+2017-10-19 16:26:36 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Data truncation: Data too long for column 'test_status' at row 1
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /testLog/log
+       Parameters = {project_id=[1], feature=[feature01], test_suite=[Test Suite 01], scenario_id=[ScenarioId02], scenario_name=[Scenario name 02], tags=[tag02, tag03], test_status=[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet nisi dignissim, vehicula arcu nec, congue odio. 131 char.], test_timeout=[20s], test_windows_size=[1200 by 800], screenshot_url=[url_screenshot.png], test_start_date=[2017-10-19 16:26:36.668], test_end_date=[2017-10-19 16:26:36.668]}
+          Headers = {Authorization=[Basic dG9tOnBhc3N3b3Jk]}
+
+Handler:
+             Type = fttestlog.controller.TestLogController
+           Method = public java.lang.String fttestlog.controller.TestLogController.addNewTestLog(long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.sql.Timestamp,java.sql.Timestamp)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[12], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = text/plain;charset=UTF-8
+             Body = Server error
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List Test Log by ProjectID
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - New test log added : 2017-10-19 16:26:36.682 - 3 - feature01 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /testLog/log
+       Parameters = {project_id=[3], feature=[feature01], test_suite=[Test Suite IBM], scenario_id=[ScenarioId02], scenario_name=[Scenario name 02], tags=[tag02, tag03], test_status=[PASSED], test_timeout=[20s], test_windows_size=[1200 by 800], screenshot_url=[url_screenshot.png], test_start_date=[2017-10-19 16:26:36.682], test_end_date=[2017-10-19 16:26:36.682]}
+          Headers = {Authorization=[Basic dG9tOnBhc3N3b3Jk]}
+
+Handler:
+             Type = fttestlog.controller.TestLogController
+           Method = public java.lang.String fttestlog.controller.TestLogController.addNewTestLog(long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.sql.Timestamp,java.sql.Timestamp)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[44], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = text/plain;charset=UTF-8
+             Body = New test log added : 2017-10-19 16:26:36.682
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - Request findByProjectId()
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /testLog/findByProjectId
+       Parameters = {project_id=[3]}
+          Headers = {Authorization=[Basic dG9tOnBhc3N3b3Jk]}
+
+Handler:
+             Type = fttestlog.controller.TestLogController
+           Method = public java.lang.Iterable<fttestlog.model.TestLog> fttestlog.controller.TestLogController.findByProjectId(long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":4,"project":{"id":3,"name":"IBM project","idName":"IBM1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}},"feature":"feature01","testSuite":"Test Suite IBM","scenarioId":"ScenarioId02","scenarioName":"Scenario name 02","screenshotUrl":"url_screenshot.png","tags":"tag02, tag03","testStartDate":1508423197000,"testEndDate":1508423197000,"testStatus":"PASSED","testTimeout":"20s","testWindowsSize":"1200 by 800"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List Test Log by ProjectID anonymously
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /testLog/findByProjectId
+       Parameters = {project_id=[3]}
+          Headers = {}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = null
+          Headers = {WWW-Authenticate=[Basic realm=MY_TEST_REALM], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = null
+             Body = HTTP Status 401 : Full authentication is required to access this resource
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List Test Log with admin user
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - Request findAll()
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /testLog/list
+       Parameters = {}
+          Headers = {Authorization=[Basic YmlsbDpwYXNzd29yZA==]}
+
+Handler:
+             Type = fttestlog.controller.TestLogController
+           Method = public java.lang.Iterable<fttestlog.model.TestLog> fttestlog.controller.TestLogController.listTestLog()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[application/json;charset=UTF-8], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = application/json;charset=UTF-8
+             Body = [{"id":1,"project":{"id":1,"name":"ft-test-log","idName":"FT1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}},"feature":"Feature01","testSuite":"Test Suite name","scenarioId":"ScenarioId01","scenarioName":"Scenario Name 01","screenshotUrl":"url_screenshot.png","tags":"tag01, tag02","testStartDate":1508423196000,"testEndDate":1508423196000,"testStatus":"PASSED","testTimeout":"20s","testWindowsSize":"1200 by 800"},{"id":2,"project":{"id":1,"name":"ft-test-log","idName":"FT1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}},"feature":"feature01","testSuite":"Test Suite 01","scenarioId":"ScenarioId01","scenarioName":"Scenario name 01","screenshotUrl":"url_screenshot.png","tags":"tag02, tag03","testStartDate":1508423197000,"testEndDate":1508423197000,"testStatus":"FAILED","testTimeout":"20s","testWindowsSize":"1200 by 800"},{"id":3,"project":{"id":2,"name":"Apple project","idName":"A1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}},"feature":"feature01","testSuite":"Test Suite Apple","scenarioId":"ScenarioId02","scenarioName":"Scenario name 02","screenshotUrl":"url_screenshot.png","tags":"tag02, tag03","testStartDate":1508423197000,"testEndDate":1508423197000,"testStatus":"PASSED","testTimeout":"20s","testWindowsSize":"1200 by 800"},{"id":4,"project":{"id":3,"name":"IBM project","idName":"IBM1","customer":{"id":1,"idName":"F1","name":"FanaticalTest"}},"feature":"feature01","testSuite":"Test Suite IBM","scenarioId":"ScenarioId02","scenarioName":"Scenario name 02","screenshotUrl":"url_screenshot.png","tags":"tag02, tag03","testStartDate":1508423197000,"testEndDate":1508423197000,"testStatus":"PASSED","testTimeout":"20s","testWindowsSize":"1200 by 800"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add test Log Anonymous
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /testLog/log
+       Parameters = {project_id=[1], feature=[feature01], test_suite=[Test Suite 01], scenario_id=[ScenarioId02], scenario_name=[Scenario name 02], tags=[tag02, tag03], test_status=[PASSED], test_timeout=[20s], test_windows_size=[1200 by 800], screenshot_url=[url_screenshot.png], test_start_date=[2017-10-19 16:26:36.732], test_end_date=[2017-10-19 16:26:36.732]}
+          Headers = {}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = null
+          Headers = {WWW-Authenticate=[Basic realm=MY_TEST_REALM], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = null
+             Body = HTTP Status 401 : Full authentication is required to access this resource
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - List Test Log with wrong credential
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /testLog/list
+       Parameters = {}
+          Headers = {Authorization=[Basic dG9tOnRvdG8=]}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = null
+          Headers = {WWW-Authenticate=[Basic realm=MY_TEST_REALM], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = null
+             Body = HTTP Status 401 : Bad credentials
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2017-10-19 16:26:36 [main] INFO  fttestlog.CustomerControllerTest - Add test Log as user
+2017-10-19 16:26:36 [main] INFO  f.controller.CustomerController - New test log added : 2017-10-19 16:26:36.743 - 1 - feature01 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /testLog/log
+       Parameters = {project_id=[1], feature=[feature01], test_suite=[Test Suite 01], scenario_id=[ScenarioId02], scenario_name=[Scenario name 02], tags=[tag02, tag03], test_status=[PASSED], test_timeout=[20s], test_windows_size=[1200 by 800], screenshot_url=[url_screenshot.png], test_start_date=[2017-10-19 16:26:36.743], test_end_date=[2017-10-19 16:26:36.743]}
+          Headers = {Authorization=[Basic dG9tOnBhc3N3b3Jk]}
+
+Handler:
+             Type = fttestlog.controller.TestLogController
+           Method = public java.lang.String fttestlog.controller.TestLogController.addNewTestLog(long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.sql.Timestamp,java.sql.Timestamp)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = {Content-Type=[text/plain;charset=UTF-8], Content-Length=[44], X-Content-Type-Options=[nosniff], X-XSS-Protection=[1; mode=block], Cache-Control=[no-cache, no-store, max-age=0, must-revalidate], Pragma=[no-cache], Expires=[0], X-Frame-Options=[DENY]}
+     Content type = text/plain;charset=UTF-8
+             Body = New test log added : 2017-10-19 16:26:36.743
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.184 sec - in fttestlog.TestLogControllerTest
+2017-10-19 16:26:36 [Thread-4] INFO  o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@23941fb4: startup date [Thu Oct 19 16:26:30 CEST 2017]; root of context hierarchy
+2017-10-19 16:26:36 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+
+Results :
+
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 9.170 s
+[INFO] Finished at: 2017-10-19T16:26:36+02:00
+[INFO] Final Memory: 18M/309M
+[INFO] ------------------------------------------------------------------------
